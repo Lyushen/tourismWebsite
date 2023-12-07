@@ -1,0 +1,35 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/navbarStyle.css">
+        <title>Contact Us</title>
+        <style>.field-error {color: red;font-weight: bold;}
+        </style>
+    </head>
+<body>
+        <br><br>
+        <div class="page-container">
+
+            <h1>Contact Us</h1>
+            <p>Please fill-up the form. Required market by asterisk (<span style="color: red;">*</span>)</p>
+
+            <form id="myForm" action="" novalidate>
+                <div class="form-control">
+                    <label for="fullName">Your full name <span style="color: red;">*</span></label>
+                    <p><input required id="fullName" type="text" name="full_name" /></p>
+                    <div class="field-error"></div>
+                </div><br>
+
+                <div class="form-control">
+                    <label for="emailAddress">Your email <span style="color: red;">*</span></label>
+                    <p><input required id="emailAddress" type="email" name="email_address" /></p>
+                    <div class="field-error"></div>
+                </div><br>
+
+                <input type="submit" value="Submit" />
+
+            </form>
+        </div>
+</body>
+<script src="scripts/form.js"></script>
+<script src="scripts/injectNavBar.js"></script>
+</html>

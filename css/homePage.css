@@ -51,3 +51,28 @@ html, body {
   80%, 95% { transform: translateX(-400vw); } /* Hold Slide 3 */
   100% { transform: translateX(0); }          /* Transition back to Slide 1 */
 }
+
+* {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.4), 
+               0 0 10px rgba(0, 0, 0, 0.5), 
+               0 0 15px rgba(0, 0, 0, 0.6), 
+               0 0 20px rgba(0, 0, 0, 0.7), 
+               0 0 25px rgba(0, 0, 0, 0.8), 
+               0 0 30px rgba(0, 0, 0, 0.9), 
+               0 0 35px rgba(0, 0, 0, 1);
+  color: #FFFFFF;
+  line-height: 1.6; /* Adjust this value as needed */
+}
+
+#slideshow {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
