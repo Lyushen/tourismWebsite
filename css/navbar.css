@@ -1,12 +1,3 @@
-/* Basic styling for navbar */
-html, body{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden; /* This will prevent scrolling */
-    font-family: Helvetica, sans-serif;
-}
 .navbar {
     position: fixed; /* Fixed at the top */
     top: 0;
@@ -15,8 +6,21 @@ html, body{
     background-color: rgba(255, 255, 255, 0); /* Semi-transparent */
     z-index: 1000; /* Ensure it's above other content */
     /* Add other styling as needed */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.4), 
+    0 0 10px rgba(0, 0, 0, 0.5), 
+    0 0 15px rgba(0, 0, 0, 0.6), 
+    0 0 20px rgba(0, 0, 0, 0.7), 
+    0 0 25px rgba(0, 0, 0, 0.8), 
+    0 0 30px rgba(0, 0, 0, 0.9), 
+    0 0 35px rgba(0, 0, 0, 1);
+    color: #FFFFFF;
+    line-height: 1.6; /* Adjust this value as needed */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for the opacity */
 }
-
+.navbar-visible {
+    opacity: 1; /* Fully visible when the class is added */
+}
 .nav-links {
     list-style-type: none;
     margin: 0;
