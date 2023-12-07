@@ -30,4 +30,11 @@ slideText.addEventListener('animationstart', (event) => {
   // Start the animation
   slideText.style.animationName = 'textFadeIn';
   });
-  
+  function toggleCartMenu() {
+    const cartMenu = document.getElementById('cartMenu');
+    if (cartMenu.style.right === '0px') {
+        cartMenu.style.right = '-100%'; // Hide
+    } else {
+        cartMenu.style.right = '0px'; // Show
+    }
+}

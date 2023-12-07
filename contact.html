@@ -2,8 +2,10 @@
     <head>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <title>Contact Us</title>
-        <style>.field-error {color: red;font-weight: bold;}
-        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="images/favicon/CityEmblem32.ico">
+        <meta charset="utf-8"/>
+        <script src="scripts/injectNavBar.js"></script>
     </head>
 <body>
         <br><br>
@@ -24,12 +26,14 @@
                     <p><input required id="emailAddress" type="email" name="email_address" /></p>
                     <div class="field-error"></div>
                 </div><br>
-
+                <div class="request">
+                    <label for="request">Your request</Label>
+                        <p><textarea id="request" name="request"></textarea></div></p>
+                <br>
                 <input type="submit" value="Submit" />
 
             </form>
         </div>
 </body>
 <script src="scripts/form.js"></script>
-<script src="scripts/injectNavBar.js"></script>
 </html>

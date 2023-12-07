@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', function () {
+
 // Define constants for all of the elements we will be working with
 const form = document.querySelector('#myForm');
 const nameInput = document.querySelector('#fullName');
@@ -73,3 +75,4 @@ emailInput.addEventListener('input', validateEmail);
 // Set up an event listener for the form
 // The event we are listening for is "submit" (occurs when user trys to submit the form)
 form.addEventListener('submit', validateForm);
+});

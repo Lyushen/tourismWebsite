@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon32.png">
+    <title>Ticket Sales Cart</title>
+</head>
+<body>
+    <h1>Ticket Sales</h1>
+        
+    <div class="tickets">
+        <div class="ticket" data-id="1">
+            <h2>Event 1 Ticket</h2>
+            <p>Price: $50</p>
+            <label for="event1-quantity">Quantity:</label>
+            <input type="number" id="event1-quantity" value="1" min="1">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    
+        <div class="ticket" data-id="2">
+            <h2>Event 2 Ticket</h2>
+            <p>Price: $60</p>
+            <label for="event2-quantity">Quantity:</label>
+            <input type="number" id="event2-quantity" value="1" min="1">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    
+        <div class="ticket" data-id="3">
+            <h2>Event 3 Ticket</h2>
+            <p>Price: $70</p>
+            <label for="event3-quantity">Quantity:</label>
+            <input type="number" id="event3-quantity" value="1" min="1">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    
+    </div>
+    <h2>Shopping Cart</h2>
+    <div class="cart">
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,16 +1,10 @@
 html, body {
-  width: 100%;
-  height: 100%;
   overflow: hidden; /* This will prevent scrolling */
-  font-family: Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   animation: fadeIn 0.3s ease-in-out forwards;
   color:black;
 }
-
-.page-container {
-  width: 100%;
-  height: 100%;
-}
+.field-error {color: red;font-weight: bold;} /* validation error */
 
 #slideshow {
   text-align: center;
@@ -18,6 +12,7 @@ html, body {
   width: 100vw;
   max-height: 100vh; /* Max height is set to 100% of the viewport height */
   margin: 0 auto;
+  
 }
 
 .slide-wrapper {
@@ -63,7 +58,7 @@ html, body {
 
 /* Key Frames for Slide and Fade In animations */
 @keyframes fadeIn {
-  from { opacity: 0.20; }
+  from { opacity: 0.2; }
   to { opacity: 1; }
 }
 
@@ -76,36 +71,46 @@ html, body {
   100% { transform: translateX(0); }  /* Transition back to Slide 1 */
 }
 
-/* navbar secion */
+/* Navbar section */
 .navbar {
-  position: relative; /* Fixed at the top */
-  top: 0;
-  left: 0;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between; /* Logo on left, links on right */
   width: 100%;
-  background-color: rgba(255, 255, 255, 0);
-  z-index: 1000; /* Ensure it's above other content */
+  background-color: transparent;
+  z-index: 1000;
   line-height: 2; 
   padding: 1px;
 }
 
+.cart-container img
+{
+  width: 3vw; /* Make the logo responsive and relatively larger */
+  min-width: 40px; /* Minimum width */
+  flex-shrink: 0; /* Prevent logo from shrinking */
+  height: auto; /* Maintain aspect ratio */
+}
+.logo-container img 
+{
+  width: 15vw; /* Make the logo responsive and relatively larger */
+  flex-shrink: 0; /* Prevent logo from shrinking */
+  min-width: 80px; /* Minimum width */
+  height: auto; /* Maintain aspect ratio */
+
+}
+
 .nav-links {
-  
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center items horizontally */
-  gap: 2%; /* Spacing between items, adjust as needed */
-}
-
-.nav-links li {
-  
-  position: relative;
-  
+  display: flex;
+  justify-content: center;
+  flex-grow: 1; /* Take the available space */
+  gap: 1%;
 }
 
 .nav-links li a {
-  color:black;
+  color: black;
   display: block;
   padding: 14px 16px;
   text-decoration: none;
@@ -113,6 +118,7 @@ html, body {
   position: relative;
   overflow: hidden;
 }
+
 
 .nav-links li a span {
   position: absolute;
@@ -172,9 +178,63 @@ html, body {
 }
 
 /* Hover Effects */
-.nav-links li a:hover::before,
-.nav-links li a:hover::after,
-.nav-links li a:hover span {
+.nav-links li a:hover::before {
   transform: scaleX(1);
+  transform-origin: right; /* Retracts to the right */
+}
+
+.nav-links li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left; /* Retracts to the left */
+}
+
+.nav-links li a:hover span:first-child {
   transform: scaleY(1);
+  transform-origin: top; /* Retracts to the top */
+}
+
+.nav-links li a:hover span:last-child {
+  transform: scaleY(1);
+  transform-origin: bottom; /* Retracts to the bottom */
+}
+
+/* forms */
+#form{
+  width: 50%;
+  height: 50%;
+}
+.page-container {
+  width: 50%;
+  height: 50%;
+}
+input{
+  color: black;
+}
+label, input, textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+form {
+width: 30em;
+}
+.form-control {
+margin-bottom: 1em;
+}
+textarea {
+min-height: 5em;
+}
+
+.form-control input,
+.form-control textarea {
+padding: 0.5em;}
+input[type="checkbox"] {
+display: inline-block;
+width: auto; /* Override the width: 100%; rule */
+margin-right: 0.5em; /* Add some space between the checkbox and the label */
+}
+
+.checkbox label {
+display: inline-block; /* This will align the label next to the checkbox */
+width: auto; /* Override the width: 100%; rule */
 }
