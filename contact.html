@@ -28,8 +28,66 @@
                 <input type="submit" value="Submit" />
 
             </form>
+            <h2>JavaScript Geolocation API</h2>
+            <p>Click the button to get your coordinates and update the map.</p>
+            <button onclick="getLocationAndUpdateMap()">Try It</button>  <label id="geoError"><b></b></label>
+            <p ></p>
+            <iframe id="mapIframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3372.624232219943!2d-6.370456153143117!3d53.293019729782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486774b3ccb36689%3A0x1754a9a979eb8cb0!2sDDLETB%20Tallaght%20Training%20Centre!5e0!3m2!1sen!2sie!4v1702034859214!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe id="streetViewIframe" src="https://www.google.com/maps/embed?pb=!4v1702036971396!6m8!1m7!1sqEpTyC0Yvn1_o0cWOnJyJA!2m2!1d53.29389840461779!2d-6.374615580773153!3f155.5245555303948!4f10.99077798832775!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+
         </div>
+
 </body>
 <script src="scripts/form.js"></script>
 <script src="scripts/injectNavBar.js"></script>
+<script>
+ const errorText = document.getElementById("geoError");
+const mapIframe = document.getElementById("mapIframe");
+
+function getLocationAndUpdateMap() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPositionAndUpdateMap, showError);
+  } else { 
+    errorText.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+ function showPositionAndUpdateMap(position) {
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
+
+  /* x.innerHTML = "Latitude: " + latitude + 
+  "<br>Longitude: " + longitude; */
+
+  updateMapAndView(latitude, longitude);
+}
+
+function updateMapAndView(latitude, longitude) {
+                // Update the map
+                const mapUrl = `https://www.google.com/maps?q=${latitude},${longitude}&hl=es;z=14&output=embed`;
+                mapIframe.src = mapUrl;
+              
+                // Update the Street View
+                // Adjust the camera position (latitude, longitude), orientation, and zoom as needed
+                const streetViewUrl = `https://www.google.com/maps/embed?pb=!4v1702036816746!6m8!1m7!1s${latitude},${longitude}!2m2!1d${latitude}!2d${longitude}!3f12.969013127142773!4f-7.42692040477003!5f0.7820865974627469`;
+                streetViewIframe.src = streetViewUrl;
+              }
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+    errorText.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+    errorText.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+    errorText.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+    errorText.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+    </script>
 </html>
