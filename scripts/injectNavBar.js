@@ -5,4 +5,4 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.insertAdjacentHTML('afterbegin', data);
         })
         .catch(error => console.error('Error loading navbar:', error));
-});
+    });

@@ -1,5 +1,4 @@
 // map-geolocation.js
-
 const errorText = document.getElementById("geoError");
 const mapIframe = document.getElementById("mapIframe");
 const streetViewIframe = document.getElementById("streetViewIframe");
@@ -42,6 +41,9 @@ function showError(error) {
             break;
         case error.UNKNOWN_ERROR:
             errorText.innerHTML = "An unknown error occurred."
+            break;
+        default: error
+            errorText.innerHTML = "Some random error accourd that wasn't catched"
             break;
     }
 }

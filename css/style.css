@@ -1,5 +1,4 @@
 html, body {
-  overflow: hidden; /* This will prevent scrolling */
   font-family: Arial, sans-serif;
   animation: fadeIn 0.3s ease-in-out forwards;
   color:black;
@@ -125,7 +124,7 @@ html, body {
 .nav-links li a span {
   position: absolute;
   background-color: #000000;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
 /* Top Border */
@@ -140,7 +139,7 @@ html, body {
   background-color: #000000;
   transform: scaleX(0);
   transform-origin: left; /* Starts from the top left */
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
 /* Bottom Border */
@@ -154,7 +153,7 @@ html, body {
   background-color: #000000;
   transform: scaleX(0);
   transform-origin: right; /* Starts from the bottom right */
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
 /* Left Border */
@@ -165,7 +164,7 @@ html, body {
   width: 2px;
   transform: scaleY(0);
   transform-origin: bottom; /* Starts from the bottom left */
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
 /* Right Border */
@@ -176,7 +175,7 @@ html, body {
   width: 2px;
   transform: scaleY(0);
   transform-origin: top; /* Starts from the top right */
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
 /* Hover Effects */
@@ -206,8 +205,7 @@ html, body {
   height: 50%;
 }
 .page-container {
-  width: 50%;
-  height: 50%;
+
 }
 input{
   color: black;
