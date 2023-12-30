@@ -6,30 +6,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="images/favicon/CityEmblem32.ico">
         <meta charset="utf-8"/>
-        <script src="scripts/injectNavBar.js"></script>
+        <script src="./scripts/injectNavBar.js"></script>
     </head>
 <body>
-        <div class="page-container">
-            <h1>Contact Us</h1>
-            <p>Please fill-up the form. Required market by asterisk (<span style="color: red;">*</span>)</p>
-            <form id="myForm" action="" novalidate>
-                <div class="form-control">
-                    <label for="fullName">Your full name <span style="color: red;">*</span></label>
-                    <p><input required id="fullName" type="text" name="full_name"></p>
-                    <div class="field-error"></div>
-                </div><br>
-
-                <div class="form-control">
-                    <label for="emailAddress">Your email <span style="color: red;">*</span></label>
-                    <p><input required id="emailAddress" type="email" name="email_address"></p>
-                    <div class="field-error"></div>
-                </div><br>
-                <div class="request">
-                    <label for="request">Your request</Label>
-                        <p><textarea id="request" name="request"></textarea></div></p>
-                <br>
-                <label><input type="submit" value="Submit"></label>
-            </form>
+    <div class="page-container">
+        <h1>Contact Us</h1>
+        <p>Please fill-up the form. Required market by asterisk (<span style="color: red;">*</span>)</p>
+        <form id="myForm" action="" novalidate>
+            <div class="form-control">
+                <label for="fullName">Your full name <span style="color: red;">*</span></label>
+                <p><input required id="fullName" type="text" name="full_name"></p>
+                <div class="field-error"></div>
+            </div>
+    
+            <div class="form-control">
+                <label for="emailAddress">Your email <span style="color: red;">*</span></label>
+                <p><input required id="emailAddress" type="email" name="email_address"></p>
+                <div class="field-error"></div>
+            </div>
+            <div class="form-control">
+                <label for="request">Your request</label>
+                <p><textarea id="request" name="request"></textarea></p>
+                <!-- No error message for request as it's not required -->
+            </div>
+            <p><input type="submit" value="Submit"></p>
+            <div id="formSuccessMessage" style="display:none; color: green;">Form submitted successfully!</div>
+        </form>
             <h2>JavaScript Geolocation API</h2>
             <p>Click the button to get your coordinates and update the map.</p>
             <button onclick="getLocationAndUpdateMap()">Try It</button>  <label id="geoError"><b></b></label>
@@ -37,6 +39,6 @@
             <iframe id="streetViewIframe" src="https://www.google.com/maps/embed?pb=!4v1702036971396!6m8!1m7!1sqEpTyC0Yvn1_o0cWOnJyJA!2m2!1d53.29389840461779!2d-6.374615580773153!3f155.5245555303948!4f10.99077798832775!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
         </div>
 </body>
-<script src="scripts/form.js"></script>
 <script src="./scripts/map-geolocation.js"></script>
+<script src="./scripts/form.js"></script>
 </html>

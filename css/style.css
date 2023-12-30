@@ -14,6 +14,28 @@ html, body {
   
 }
 
+/* iframe #backvideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width:100vw;
+  height: auto;
+  z-index: -100;
+  background-size: cover;
+} */
+
+#myVideo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Place it behind other elements */
+}
+
 .slide-wrapper {
   width: 500vw; /* Adjusted for 5 images */
   animation: slide 20s infinite; /* Adjust the duration to match your requirement */
@@ -74,30 +96,33 @@ html, body {
 
 /* Navbar section */
 .navbar {
-  display: flex; /* Use flexbox */
-  align-items: center; /* Align items vertically in the center */
-  justify-content: space-between; /* Logo on left, links on right */
-  width: 100%;
-  background-color: transparent;
+  position: fixed; /* Fixed positioning */
+  left: 0; /* Align to the left edge of the viewport */
+  right: 0; /* Stretch to the right edge of the viewport */
+  background-image: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffffff 50%, /* White color until 30% */
+    rgba(255, 255, 255, 0) 100% /* Gradually transitions to transparent */
+  );
   z-index: 1000;
   line-height: 2; 
   padding: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-.cart-container img
-{
-  width: 3vw; /* Make the logo responsive and relatively larger */
-  min-width: 40px; /* Minimum width */
-  flex-shrink: 0; /* Prevent logo from shrinking */
+.cart-container img{
+  width: 4vw; /* Make the logo responsive and relatively larger */
+  min-width: 30px; /* Minimum width */
   height: auto; /* Maintain aspect ratio */
+  flex-shrink: 0;
 }
-.logo-container img 
-{
+.logo-container img {
   width: 15vw; /* Make the logo responsive and relatively larger */
-  flex-shrink: 0; /* Prevent logo from shrinking */
   min-width: 80px; /* Minimum width */
   height: auto; /* Maintain aspect ratio */
-
+  flex-shrink: 0;
 }
 
 .nav-links {
@@ -105,12 +130,17 @@ html, body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-grow: 1; /* Allow nav-links to take up available space */
+  flex-shrink: 1; /* Allow shrinking if needed */
   justify-content: center;
-  flex-grow: 1; /* Take the available space */
+  display: flex;
   gap: 1%;
+
 }
 
 .nav-links li a {
+  min-width: max-content;
+  flex: 1;
   color: black;
   display: block;
   padding: 14px 16px;
@@ -248,3 +278,30 @@ width: auto; /* Override the width: 100%; rule */
 iframe:hover {
   width: 100vw;
 } */
+/* Media query for screens with a max-width of 650px */
+@media (max-width: 650px) {
+  .navbar {
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-between; /* Space out logo and cart container */
+  }
+
+  .logo-container {
+    flex-basis: auto; /* Allow logo container to adjust its size */
+    flex-grow: 1; /* Allow it to grow if needed */
+    order: 1; /* Ensure logo container comes first */
+  }
+
+  .cart-container {
+    flex-basis: auto; /* Allow cart container to adjust its size */
+    flex-grow: 0; /* Prevent it from growing */
+    order: 2; /* Place cart container after logo container */
+    align-self: flex-start; /* Align to the start (right side in this case) */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack the links vertically */
+    align-items: center; /* Center the links */
+    width: 100%; /* Full width for the vertical layout */
+    order: 3; /* Ensure nav-links come after the logo and cart container */
+  }
+}
