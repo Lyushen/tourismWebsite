@@ -1,0 +1,83 @@
+[
+    {
+        "imageUrl": "./historicalPlaces/SobornaStreet/SobornaStreet-1120x580.jpg",
+        "title": "Soborna Street",
+        "detailPath": "./historicalPlaces/SobornaStreet/SobornaStreet.html" 
+    },
+    {
+        "imageUrl": "./historicalPlaces/PodilskyiZoo/PodilskyiZoo-1120x580.jpg",
+        "title": "Podilskyi Zoo",
+        "detailPath": "./historicalPlaces/PodilskyiZoo/PodilskyiZoo.html" 
+    },
+    {
+        "imageUrl": "./historicalPlaces/EuropeanSquareAndArtynovTower/EuropeanSquareAndArtynovTower-1120x580.jpg",
+        "title": "European Square and Artynov Tower",
+        "detailPath": "./historicalPlaces/EuropeanSquareAndArtynovTower/EuropeanSquareAndArtynovTower.html"
+    },
+    {
+        "imageUrl": "path/to/image1.jpg",
+        "title": "Place Title 1",
+        "detailPath": "link-to-more1.html"
+    },
+    {
+        "imageUrl": "path/to/image1.jpg",
+        "title": "Place Title 1",
+        "detailPath": "link-to-more1.html"
+    },
+    {
+        "imageUrl": "path/to/image1.jpg",
+        "title": "Place Title 1",
+        "detailPath": "link-to-more1.html"
+    },
+    {
+        "imageUrl": "path/to/image1.jpg",
+        "title": "Place Title 1",
+        "detailPath": "link-to-more1.html"
+    },
+    {
+        "imageUrl": "path/to/image1.jpg",
+        "title": "Place Title 1",
+        "detailPath": "link-to-more1.html"
+    },
+    {
+        "imageUrl": "path/to/image1.jpg",
+        "title": "Place Title 1",
+        "detailPath": "link-to-more1.html"
+    },
+    {
+        "imageUrl": "path/to/image1.jpg",
+        "title": "Place Title 1",
+        "detailPath": "link-to-more1.html"
+    },
+    {
+        "imageUrl": "path/to/image1.jpg",
+        "title": "Place Title 1",
+        "detailPath": "link-to-more1.html"
+    },
+    {
+        "imageUrl": "path/to/image1.jpg",
+        "title": "Place Title 1",
+        "detailPath": "link-to-more1.html"
+    },
+    {
+        "imageUrl": "path/to/image1.jpg",
+        "title": "Place Title 1",
+        "detailPath": "link-to-more1.html"
+    },
+    {
+        "imageUrl": "path/to/image1.jpg",
+        "title": "Place Title 1",
+        "detailPath": "link-to-more1.html"
+    },
+    {
+        "imageUrl": "path/to/image1.jpg",
+        "title": "Place Title 1",
+        "detailPath": "link-to-more1.html"
+    },
+    {
+        "imageUrl": "path/to/image2.jpg",
+        "title": "Place Title 2",
+        "detailPath": "link-to-more2.html"
+    }
+
+]

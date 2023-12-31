@@ -1,15 +1,14 @@
-# Tourism Website
 # <a href="https://lyushen.github.io/tourismWebsite/" target="_blank">Tourism Website</a>
 # Task B
-Web Development Tourism Website: __e.g. Waterford__
-Your Name: Oleksii
+Web Development Tourism Website: __Vinnytsia__
+Your Name: Oleksii Nikitin
 
 
 Differences from Design Plan:
 
 
 Attribution: (code you have adapted from other sources)
-
+Close button - https://codepen.io/angro/pen/bGdVqXv
 
 Any additional libraries/frameworks used that were approved:
 

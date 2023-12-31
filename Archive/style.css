@@ -51,3 +51,69 @@ button.add-to-cart {
 .cart p {
     font-weight: bold;
 }
+
+.slide-wrapper {
+    width: 500vw; /* Adjusted for 5 images */
+    animation: slide 20s infinite; /* Adjust the duration to match your requirement */
+  }
+  
+  .slide {
+    float: left;
+    width: 100vw;
+    position: relative;
+    
+  }
+  
+  .slideText{
+    position: relative;
+    top: -15vw;
+    text-align: center;
+    color: white;
+    font-size: 4vw;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    
+  }
+  
+  .slide-start {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+  }
+  
+  .slide-end {
+    animation-name: fadeOut;
+    animation-duration: 1s;
+  }
+  
+  @keyframes textFadeIn {
+    0%, 25% { opacity: 0; }
+    25%, 100% { opacity: 1; }
+  }
+  
+  @keyframes textFadeOut {
+    0%, 75% { opacity: 1; }
+    75%, 100% { opacity: 0; }
+  }
+  
+  /* Key Frames for Slide and Fade In animations */
+  @keyframes fadeIn {
+    from { opacity: 0.2; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slide {
+    0%, 15% { transform: translateX(0); }  /* Hold Slide 1 */
+    20%, 35% { transform: translateX(-100vw); } /* Transition to Slide 2 */
+    40%, 55% { transform: translateX(-200vw); } /* Hold Slide 2 */
+    60%, 75% { transform: translateX(-300vw); } /* Transition to Slide 3 */
+    80%, 95% { transform: translateX(-400vw); } /* Hold Slide 3 */
+    100% { transform: translateX(0); }  /* Transition back to Slide 1 */
+  }
+
+  #slideshow {
+    text-align: center;
+    overflow: hidden;
+    max-width: 80%;
+    max-height: auto; /* Max height is set to 100% of the viewport height */
+    margin: 0 auto;
+  }
