@@ -288,3 +288,187 @@ height: 8vh;
     max-width: 100%;
   }
 }
+
+/* Overlay segment */
+.c{
+  text-align: center;
+}
+p{
+  text-align: left;
+  font-size: 20px;
+}
+h1{
+  text-align: center;
+  font-size: 40px;
+}
+h3{
+  text-align: center;
+  font-size: 30px;
+}
+.detailsContent img { /* centering all images */
+  display: block;
+  margin: 0 auto;
+  width: 85%;
+  height: auto;
+}
+.detailsContent li{
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px); /* Apply blur effect */
+    z-index: 15;
+}
+
+.overlay-content {
+    background-color: white;
+    padding: 20px;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+
+.close {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: #00000000;
+  border-radius: 50%;
+  box-shadow: 0 0 20px -5px rgba(255, 255, 255, 0.5);
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+  animation: fade-in 0.5s ease-out 0.25s both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+.close .circle path {
+  stroke: rgba(255, 255, 255, 1);
+  fill: none;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  animation: progress 0.5s ease-out 0.25s both;
+}
+
+@keyframes progress {
+  from {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.close span {
+  display: block;
+  width: 10px; 
+  height: 2px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 20px -5px rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  position: absolute;
+  transition: 0.25s ease-in-out;
+  animation: slide-in 0.5s ease-in-out 0.25s both;
+}
+
+@keyframes slide-in {
+  from {
+    width: 0;
+  }
+}
+
+.close span:nth-child(1) {
+  top: 20px;
+  left: 21px;
+  transform: rotate(45deg);
+  transform-origin: top left;
+}
+
+.close span:nth-child(2) {
+  top: 20px;
+  right: 21px;
+  transform: rotate(-45deg);
+  transform-origin: top right;
+}
+
+.close span:nth-child(3) {
+  bottom: 20px;
+  left: 21px;
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+}
+
+.close span:nth-child(4) {
+  bottom: 20px;
+  right: 21px;
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+}
+
+.close:hover {
+  background: #0000008e;
+}
+
+.close:hover span {
+  width: 15px;
+}
+/* End of overlay segment */
+
+/* Shopping Cart CSS */
+.tickets {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.ticket {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  width: 200px;
+}
+
+button.add-to-cart {
+  background-color: #0074cc;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cart {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.cart ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.cart p {
+  font-weight: bold;
+}

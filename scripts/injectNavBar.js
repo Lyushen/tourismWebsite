@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     var navholder = document.querySelector('#nav-placeholder');
-    var currentVersion = '1.1'; // To update our navbar we implemented version control, to force update the cache variable
+    var currentVersion = '1.241'; // To update our navbar we implemented version control, to force update the cache variable
 
     function loadNavbar() {
         var storedVersion = localStorage.getItem('navbarVersion');

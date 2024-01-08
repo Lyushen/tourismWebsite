@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vinnytsia Shopping Cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./images/favicon/CityEmblem32.ico">
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="scripts/injectNavBar.js"></script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <h1>Tour Sales</h1>
+        
+    <div class="tickets">
+        <div class="ticket" data-id="1">
+            <h2>Tour 1 Ticket</h2>
+            <p>Price: ₴200</p>
+            <label for="event1-quantity">Quantity:</label>
+            <input type="number" id="event1-quantity" value="1" min="1">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    
+        <div class="ticket" data-id="2">
+            <h2>Tour 2 Ticket</h2>
+            <p>Price: ₴250</p>
+            <label for="event2-quantity">Quantity:</label>
+            <input type="number" id="event2-quantity" value="1" min="1">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    
+        <div class="ticket" data-id="3">
+            <h2>Tour 3 Ticket</h2>
+            <p>Price: ₴500</p>
+            <label for="event3-quantity">Quantity:</label>
+            <input type="number" id="event3-quantity" value="1" min="1">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    
+    </div>
+    <h2>Shopping Cart</h2>
+    <div class="cart">
+        <ul id="cart-items"></ul>
+        <p>Total: ₴<span id="cart-total">0</span></p>
+    </div>
+
+    <button id="clear-cart">Clear Cart</button>
+
+</body>
+<script src="./scripts/shoppingcart.js"></script>
+</html>
